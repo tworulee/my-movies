@@ -41,6 +41,16 @@ class App extends Component {
       "id": 13
     }
   ]  } 
+
+   deleteMovie=(movie)=>{
+      const newMovieList =this.state.movies.filter(
+          m=>m.id!==movie.id
+      );
+      this.setState({
+        movies:newMovieList
+      })
+  }
+
   render() { 
     return (
       <div className="container">
@@ -50,6 +60,7 @@ class App extends Component {
           </div>
           <Movies
             movies={this.state.movies}
+            deleteMovie={this.deleteMovie}
           />
         </div>
       </div>
