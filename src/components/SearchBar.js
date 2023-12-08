@@ -10,8 +10,8 @@ class SearchBar extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className="form-row mb-5 mt-5">
-          <div className="col-12">
+        <div className="row mb-5 mt-5">
+          <div className="col-9">
             <input
               onChange={
                this.props.searchMovieProp
@@ -22,6 +22,12 @@ class SearchBar extends Component {
              
             ></input>
           </div>
+          <div className="col-3">
+                        <button type="button" 
+                                className="btn btn-md btn-danger"
+                                style={{float:'end'}}>Add Movie
+                        </button>
+                    </div>
         </div>
       </form>
     );
