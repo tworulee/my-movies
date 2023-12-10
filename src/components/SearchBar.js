@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 class SearchBar extends Component {
   
@@ -23,10 +24,12 @@ class SearchBar extends Component {
             ></input>
           </div>
           <div className="col-3">
-                        <button type="button" 
+                        <Link 
+                                to ="/add"
+                                type="button" 
                                 className="btn btn-md btn-danger"
                                 style={{float:'end'}}>Add Movie
-                        </button>
+                        </Link>
                     </div>
         </div>
       </form>
